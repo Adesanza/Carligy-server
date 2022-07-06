@@ -14,7 +14,11 @@ async function bootstrap() {
   // Cors configuration
 
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: [
+      process.env.CLIENT_BASE_LOCAL_URL,
+      process.env.CLIENT_BASE_PRODUCTION_URL,
+      process.env.CLIENT_BASE_STAGING_URL,
+    ],
   });
 
   // Request validation setup
