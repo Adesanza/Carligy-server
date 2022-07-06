@@ -13,8 +13,13 @@ import { MailerService } from './mailer.service';
           port: 465,
           secure: true,
           auth: {
+            // type: 'OAuth2',
             user: configService.get('MAIL_INCOMING_USERNAME'),
             pass: configService.get('MAIL_INCOMING_PASSWORD'),
+            // clientId: configService.get('MAIL_OAUTH_CLIENTID'),
+            // clientSecret: configService.get('MAIL_OAUTH_CLIENT_SECRET'),
+            // refreshToken: configService.get('MAIL_OAUTH_REFRESH_TOKEN'),
+            // accessToken: configService.get('MAIL_OAUTH_ACCESS_TOKEN'),
           },
           tls: {
             rejectUnauthorized: false,
