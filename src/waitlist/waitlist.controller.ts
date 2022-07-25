@@ -19,7 +19,7 @@ export class WaitlistController {
     description: 'Join the waitlist',
   })
   async joinWaitlist(@Body() dto: WaitlistUserDto) {
-    await this.service.joinWaitlist(dto);
-    return { success: true, message: 'added to the waitlist' };
+    const response = await this.service.joinWaitlist(dto);
+    return { success: true, message: response };
   }
 }

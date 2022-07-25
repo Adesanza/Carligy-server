@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { HealthModule } from './health/health.module';
 import { WaitlistModule } from './waitlist/waitlist.module';
 import { MailerModule } from './mailer/mailer.module';
+import { MailchimpModule } from './mailchimp/mailchimp.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { MailerModule } from './mailer/mailer.module';
     }),
     WaitlistModule,
     MailerModule,
+    MailchimpModule,
   ],
   controllers: [],
   providers: [],
