@@ -9,13 +9,13 @@ import { MailerService } from './mailer.service';
     MailingModule.forRootAsync({
       useFactory: async (configService: ConfigService) => ({
         transport: {
-          host: 'smtp.mandrillapp.com',
-          port: 587,
+          host: configService.get('MAIL_OUTGOING_SERVER'),
+          port: configService.get('MAIL_OUTGOING_PORT'),
           secure: false,
           auth: {
             // type: 'OAuth2',
-            user: 'velociteeafrica',
-            pass: 'CNLG-gWqpFTIdYSWzIXxuQ',
+            user: configService.get('MAIL_INCOMING_USERNAME'),
+            pass: configService.get('MAIL_INCOMING_PASSWORD'),
             // clientId: configService.get('MAIL_OAUTH_CLIENTID'),
             // clientSecret: configService.get('MAIL_OAUTH_CLIENT_SECRET'),
             // refreshToken: configService.get('MAIL_OAUTH_REFRESH_TOKEN'),

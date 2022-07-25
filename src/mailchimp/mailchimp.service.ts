@@ -71,7 +71,7 @@ export class MailchimpService implements OnModuleInit {
     //   'gWqpFTIdYSWzIXxuQ',
     // );
     // const result = await this.addMemeberToAudience(
-    //   '067429bebb',
+    //   '067429',
     //   'badmusadeshinna@gmail.com',
     // );
     // console.log('result', result);
